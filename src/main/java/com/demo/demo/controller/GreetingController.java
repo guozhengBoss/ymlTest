@@ -1,6 +1,7 @@
 package com.demo.demo.controller;
 
 import com.demo.demo.dto.GuozhengYml;
+import com.demo.demo.dto.MyDto;
 import com.demo.demo.test.MyTest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
@@ -18,7 +19,10 @@ public class GreetingController {
     MyTest test;
 @Autowired
     GuozhengYml guozhengYml;
-    @RequestMapping
+@Autowired
+    MyDto myDto;
+
+    @RequestMapping("/qwe")
     public String greeting(@RequestParam(value="name", defaultValue="World") String name) {
         test.testAsyncMethod();
         System.out.println("guozhengYml:"+guozhengYml.getAge()+"::"+guozhengYml.getName());
@@ -26,6 +30,11 @@ public class GreetingController {
     }
     @RequestMapping("/bb")
     public String greeting1(@RequestParam(value="name", defaultValue="World") String name) {
+        myDto.testAsyncMethod();
+        myDto.testAsyncMethod();
+        myDto.testAsyncMethod();
+        myDto.testAsyncMethod();
+
         return "aaawwww";
     }
 }
