@@ -1,0 +1,20 @@
+server:
+    port: 8886
+    max-http-header-size: 100000
+
+spring:
+    jackson:
+        time-zone: GMT+8
+        date-format: yyyy-MM-dd HH:mm:ss
+    application:
+        name: auto-sale11
+    profiles:
+        active: my
+    cache:
+        jcache:
+            config: classpath:ehcache3.xml
+guozheng12:
+    name: guozheng
+    age: 18
+
+

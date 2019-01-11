@@ -1,0 +1,18 @@
+<config xmlns='http://www.ehcache.org/v3'
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.ehcache.org/v3 http://www.ehcache.org/schema/ehcache-core-3.0.xsd">
+
+<cache-template name="heap-cache">
+        <resources>
+            <heap>2000</heap>
+            <offheap unit="MB">100</offheap>
+        </resources>
+    </cache-template>
+
+    <cache alias="dictionaries" uses-template="heap-cache">
+        <expiry>
+            <ttl>3600</ttl>
+        </expiry>
+    </cache>
+
+</config>
