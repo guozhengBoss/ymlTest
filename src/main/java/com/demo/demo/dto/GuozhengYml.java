@@ -2,6 +2,7 @@ package com.demo.demo.dto;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 
@@ -14,8 +15,7 @@ import org.springframework.stereotype.Component;
  */
 
 @Component
-//@Configuration
-@PropertySource("applicaiton_my.properties")
+@Configuration
 @ConfigurationProperties(prefix = "guozheng")
 public class GuozhengYml {
 //    @Value("${guozheng12.name}")

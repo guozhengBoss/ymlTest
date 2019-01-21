@@ -1,10 +1,10 @@
 server:
     port: 8886
     max-http-header-size: 100000
-
 spring:
     jackson:
         time-zone: GMT+8
+        #日期格式化
         date-format: yyyy-MM-dd HH:mm:ss
     application:
         name: now
