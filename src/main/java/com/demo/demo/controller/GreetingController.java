@@ -1,14 +1,14 @@
 package com.demo.demo.controller;
 
 import com.demo.demo.dto.GuozhengYml;
+import com.demo.demo.dto.JacksonDateTest;
 import com.demo.demo.dto.MyDto;
 import com.demo.demo.test.MyTest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
+import java.util.Date;
 import java.util.concurrent.atomic.AtomicLong;
 
 @RestController
@@ -21,6 +21,21 @@ public class GreetingController {
     GuozhengYml guozhengYml;
 @Autowired
     MyDto myDto;
+
+
+    @RequestMapping(value="/date", method = RequestMethod.GET)
+    public JacksonDateTest dateFormatTest(){
+        JacksonDateTest dateFormatTest = new JacksonDateTest();
+        dateFormatTest.setName("100");
+        dateFormatTest.setDate(new Date());
+        return dateFormatTest;
+    }
+    @RequestMapping(value="/string", method = RequestMethod.GET)
+    public void stringDateFormatTest(JacksonDateTest dateFormatTest){
+        System.out.println(dateFormatTest.getName());
+        System.out.println(dateFormatTest.getDate());
+String a ="{ \"name\" : \"100\",\n  \"date\" : \"2019-01-21 11:58:55\"\n}";
+    }
 
     @RequestMapping("/qwe")
     public String greeting(@RequestParam(value="name", defaultValue="World") String name) {

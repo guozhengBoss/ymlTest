@@ -1,6 +1,7 @@
 package com.demo.demo.dto;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import org.springframework.context.annotation.Bean;
 
 import java.util.Date;
 
@@ -11,6 +12,7 @@ import java.util.Date;
  * @modified By：
  * @version: 1.0
  */
+
 public class JacksonDateTest {
     private String name;
 
@@ -21,7 +23,6 @@ public class JacksonDateTest {
     public void setName(String name) {
         this.name = name;
     }
-    @JsonFormat(locale="zh", timezone="GMT+8", pattern="yyyy-MM-dd HH:mm:ss")
     private Date date;
 
     public Date getDate() {

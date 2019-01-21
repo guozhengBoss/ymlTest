@@ -59,7 +59,7 @@ public class DemoApplicationTests {
 		ObjectMapper mapper =new ObjectMapper();
 		mapper.disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS);
 		mapper.disable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES);
-		//    mapper.setDateFormat(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss"));
+//		    mapper.setDateFormat(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss"));
 		//使用上方或注解
 		String s = mapper.writeValueAsString(dto);
 		System.out.println(s);
@@ -76,6 +76,8 @@ public class DemoApplicationTests {
 
 	@Test
 	public void ehcacheLoads() {
+
+
 ////		CacheManager cacheManager = CacheManagerBuilder.newCacheManager().;
 ////		CacheConfigurationBuilder<Long, String> longStringCacheConfigurationBuilder = CacheConfigurationBuilder
 ////				.newCacheConfigurationBuilder(Long.class, String.class, ResourcePoolsBuilder.heap(10));
