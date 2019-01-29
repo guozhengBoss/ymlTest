@@ -1,32 +1,18 @@
 package com.demo.demo;
 
 import com.demo.demo.dto.JacksonDateTest;
-import com.demo.demo.dto.MyDto;
-import com.demo.demo.test.MyTest;
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.*;
-import org.ehcache.Cache;
 import org.ehcache.CacheManager;
-import org.ehcache.PersistentCacheManager;
 import org.ehcache.UserManagedCache;
 import org.ehcache.config.Configuration;
-import org.ehcache.config.ResourcePool;
-import org.ehcache.config.builders.CacheConfigurationBuilder;
 import org.ehcache.config.builders.CacheManagerBuilder;
-import org.ehcache.config.builders.ResourcePoolsBuilder;
 import org.ehcache.config.builders.UserManagedCacheBuilder;
-import org.ehcache.config.units.EntryUnit;
-import org.ehcache.config.units.MemoryUnit;
 import org.ehcache.xml.XmlConfiguration;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.ResponseBody;
 
-import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.text.ParseException;
