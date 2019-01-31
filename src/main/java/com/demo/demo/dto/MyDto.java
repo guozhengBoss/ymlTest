@@ -1,5 +1,7 @@
 package com.demo.demo.dto;
 
+import org.springframework.cache.annotation.Cacheable;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 /**
@@ -9,10 +11,14 @@ import org.springframework.stereotype.Service;
  * @modified By：
  * @version: 1.0
  */
-@Service
-
+//local 1+
+    //local 3+
+@Component
 public class MyDto {
-    public  void testAsyncMethod(){
-        System.out.println("aaaaa");
+@Cacheable(value = "heap-cache")
+    public  String testAsyncMethod(){
+
+        System.out.println("using method");
+        return "ok";
     }
 }
