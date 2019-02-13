@@ -2,4 +2,8 @@ c1
 c2
 server ++
 aaaa
+<<<<<<< HEAD
 newdev++
+=======
+client++
+>>>>>>> client++
